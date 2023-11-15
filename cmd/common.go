@@ -25,8 +25,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/khulnasoft/kube-bench/check"
 	"github.com/golang/glog"
+	"github.com/khulnasoft/kube-bench/check"
 	"github.com/spf13/viper"
 )
 

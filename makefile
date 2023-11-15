@@ -1,3 +1,10 @@
+export SHELL := /bin/bash
+export SHELLOPTS := errexit
+
+GOPATH ?= $(shell go env GOPATH)
+BIN_DIR := $(GOPATH)/bin
+GOLANGCI_LINT := $(BIN_DIR)/golangci-lint
+
 SOURCES := $(shell find . -name '*.go')
 BINARY := kube-bench
 DOCKER_ORG ?= khulnasoft
@@ -100,3 +107,14 @@ kind-run-stig: kind-push
 		kubectl wait --for=condition=complete job.batch/kube-bench --timeout=60s && \
 		kubectl logs job/kube-bench > ./test.data && \
 		diff ./test.data integration/testdata/Expected_output_stig.data
+
+.PHONY: lint lintfix
+
+$(GOLANGCI_LINT):
+	curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(BIN_DIR) v1.54.2
+
+lint: $(GOLANGCI_LINT)
+	@$(GOLANGCI_LINT) run
+
+lintfix: $(GOLANGCI_LINT)
+	@$(GOLANGCI_LINT) run --fix
