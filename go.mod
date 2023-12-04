@@ -7,11 +7,12 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.25.3
 	github.com/aws/aws-sdk-go-v2/service/securityhub v1.29.1
 	github.com/fatih/color v1.16.0
-	github.com/golang/glog v1.1.2
+	github.com/golang/glog v1.2.0
 	github.com/magiconair/properties v1.8.7
 	github.com/onsi/ginkgo v1.16.5
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.6.1
+	github.com/spf13/viper v1.17.0
 	github.com/stretchr/testify v1.8.4
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/driver/postgres v1.4.6
