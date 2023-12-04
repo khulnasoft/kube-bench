@@ -3,7 +3,7 @@ module github.com/khulnasoft/kube-bench
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.23.1
+	github.com/aws/aws-sdk-go-v2 v1.23.5
 	github.com/aws/aws-sdk-go-v2/config v1.25.3
 	github.com/aws/aws-sdk-go-v2/service/securityhub v1.29.1
 	github.com/fatih/color v1.16.0
@@ -12,6 +12,7 @@ require (
 	github.com/onsi/ginkgo v1.16.5
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.6.1
+	github.com/spf13/viper v1.17.0
 	github.com/stretchr/testify v1.8.4
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/driver/postgres v1.4.6
@@ -30,7 +31,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sso v1.17.2 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.20.0 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.25.3 // indirect
-	github.com/aws/smithy-go v1.17.0 // indirect
+	github.com/aws/smithy-go v1.18.1 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
