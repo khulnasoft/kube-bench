@@ -1,0 +1,10 @@
+---
+linters:
+  disable-all: true
+  enable:
+    - gocyclo
+    - gofmt
+    - goimports
+    - govet
+    - misspell
+    - typecheck
