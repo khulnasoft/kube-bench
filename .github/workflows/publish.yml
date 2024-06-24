@@ -44,7 +44,7 @@ jobs:
 
       - name: Build and push - Docker/ECR
         id: docker_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
@@ -60,7 +60,7 @@ jobs:
 
       - name: Build and push ubi image - Docker/ECR
         id: docker_build_ubi
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
@@ -78,7 +78,7 @@ jobs:
 
       - name: Build and push fips ubi image - Docker/ECR
         id: docker_build_fips_ubi
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
